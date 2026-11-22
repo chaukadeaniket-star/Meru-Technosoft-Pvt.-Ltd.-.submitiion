@@ -39,6 +39,11 @@ npm run dev
 Before starting, copy `.env.example` to `.env` (`Copy-Item .env.example .env` in PowerShell, or `cp .env.example .env` on macOS/Linux).
 Open the Vite URL shown in the terminal (normally `http://localhost:5173`).
 
+## Deploy to GitHub Pages
+The workflow in `.github/workflows/main.yml` deploys the frontend when changes are pushed to `main`. In the repository settings, enable Pages with **GitHub Actions** as the build and deployment source.
+
+GitHub Pages hosts only the frontend. To connect it to the API, deploy the backend and MongoDB separately, then add a repository variable named `VITE_API_URL` containing the API base URL (for example, `https://api.example.com/api`). Configure the backend's `CLIENT_URL` to the Pages site URL. Without a deployed API, the frontend can load but lead operations will not work.
+
 ## API
 Base URL: `/api`
 - `GET /leads?search=&status=`
