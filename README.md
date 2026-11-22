@@ -12,7 +12,8 @@ A compact full-stack lead-management app prepared for the Meru Technosoft Pvt. L
 - Create, list, edit and delete leads
 - Lead fields: name, email, phone, company, source and status
 - Search by name/company/email and filter by status
-- Status summary cards
+- Clickable status summary cards and lead sorting (newest, oldest, name)
+- Export the current filtered lead list as CSV
 - Delete confirmation
 - Server-side validation and consistent API errors
 
